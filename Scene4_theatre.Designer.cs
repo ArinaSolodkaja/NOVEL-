@@ -176,7 +176,7 @@
             // 
             // scene4_th_ch1
             // 
-            this.scene4_th_ch1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.scene4_th_ch1.Anchor = System.Windows.Forms.AnchorStyles.None; // ИЗМЕНЕНО
             this.scene4_th_ch1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
             this.scene4_th_ch1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scene4_th_ch1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -190,7 +190,7 @@
             // 
             // scene4_th_ch2
             // 
-            this.scene4_th_ch2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.scene4_th_ch2.Anchor = System.Windows.Forms.AnchorStyles.None; // ИЗМЕНЕНО
             this.scene4_th_ch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
             this.scene4_th_ch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scene4_th_ch2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

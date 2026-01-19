@@ -223,9 +223,9 @@ namespace NOVEL_
                 );
 
                 // ЗДЕСЬ БУДЕТ ПЕРЕХОД НА СЛЕДУЮЩУЮ СЦЕНУ:
-                // Scene2 evidenceScene = new Scene2();
-                // evidenceScene.Show();
-                // this.Hide();
+                Scene2 evidenceScene = new Scene2();
+                 evidenceScene.Show();
+                 this.Hide();
             };
             clickTimer.Start();
         }
@@ -254,9 +254,9 @@ namespace NOVEL_
                 );
 
                 // ЗДЕСЬ БУДЕТ ПЕРЕХОД НА СЛЕДУЮЩУЮ СЦЕНУ:
-                // Scene3 countessScene = new Scene3();
-                // countessScene.Show();
-                // this.Hide();
+                Scene3 countessScene = new Scene3();
+                 countessScene.Show();
+                 this.Hide();
             };
             clickTimer.Start();
         }
