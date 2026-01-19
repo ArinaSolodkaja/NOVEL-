@@ -225,7 +225,7 @@ namespace NOVEL_
                 label.ForeColor = Color.FromArgb((int)(fadeAlpha * 255), label.ForeColor);
             }
         }
-
+        // изм 2
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
             base.OnFormClosed(e);

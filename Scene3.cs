@@ -274,6 +274,7 @@ namespace NOVEL_
                         MessageBox.Show($"Ошибка при переходе на сцену доктора:\n{ex.Message}",
                             "Ошибка перехода",
                             MessageBoxButtons.OK,
+                         // изм 7 
                             MessageBoxIcon.Error);
                     }
                 };

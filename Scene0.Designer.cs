@@ -88,7 +88,7 @@
             this.ResumeLayout(false);
 
         }
-
+        // изм 15 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -475,6 +475,7 @@ namespace NOVEL_
             };
             delayTimer.Start();
         }
+        // изм 14 
 
         // ОБРАБОТЧИК ИЗМЕНЕНИЯ РАЗМЕРА ОКНА
         private void Scene1_Resize(object sender, EventArgs e)

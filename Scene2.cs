@@ -405,6 +405,7 @@ namespace NOVEL_
         {
             string summary = "🔍 **Собранные улики:**\n\n";
 
+            // изм 4
             foreach (var suspect in suspects.Values)
             {
                 if (suspect.SuspicionLevel > 0)

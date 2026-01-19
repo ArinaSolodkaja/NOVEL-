@@ -181,7 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.scene2_intob_lek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+// изм 6 
         }
 
         #endregion

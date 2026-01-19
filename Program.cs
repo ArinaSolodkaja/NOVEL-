@@ -8,6 +8,7 @@ namespace NOVEL_
 {
     internal static class Program
     {
+        // изм 16 
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

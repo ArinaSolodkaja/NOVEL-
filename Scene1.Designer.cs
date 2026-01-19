@@ -234,6 +234,7 @@
             this.ResumeLayout(false);
 
         }
+        // изм 13 
 
         #endregion
 

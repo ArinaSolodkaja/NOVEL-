@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NOVEL_
 {
+    // изм 9 
     internal class InteractiveObject
     {
     }

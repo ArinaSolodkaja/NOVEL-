@@ -33,7 +33,7 @@ namespace NOVEL_
         {
             return Stats.ContainsKey(stat) ? Stats[stat] : 0;
         }
-
+        // изм 12 
         public void AddEvidence(string evidence)
         {
             if (!Inventory.Contains(evidence))

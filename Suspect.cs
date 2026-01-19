@@ -8,7 +8,7 @@ namespace NOVEL_
         public string Description { get; set; }
         public int SuspicionLevel { get; set; }
         public List<string> EvidenceAgainst { get; set; }
-
+        // изм 5 
         public Suspect(string name, string description)
         {
             Name = name;

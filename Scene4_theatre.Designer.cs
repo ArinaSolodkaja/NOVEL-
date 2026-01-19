@@ -1,5 +1,6 @@
 ﻿namespace NOVEL_
 {
+    //изм1
     partial class Scene4_theatre
     {
         /// <summary>
@@ -39,6 +40,8 @@
             this.scene4_vs32 = new System.Windows.Forms.Label();
             this.scene4_vs33 = new System.Windows.Forms.Label();
             this.scene4_vs34 = new System.Windows.Forms.Label();
+            this.scene4_th_ch1 = new System.Windows.Forms.Button();
+            this.scene4_th_ch2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.scene4_th)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +174,41 @@
             this.scene4_vs34.Text = "Или искусно отводит подозрения, играя роль?";
             this.scene4_vs34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // scene4_th_ch1
+            // 
+            this.scene4_th_ch1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.scene4_th_ch1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
+            this.scene4_th_ch1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scene4_th_ch1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scene4_th_ch1.ForeColor = System.Drawing.Color.Gold;
+            this.scene4_th_ch1.Location = new System.Drawing.Point(214, 113);
+            this.scene4_th_ch1.Name = "scene4_th_ch1";
+            this.scene4_th_ch1.Size = new System.Drawing.Size(331, 88);
+            this.scene4_th_ch1.TabIndex = 17;
+            this.scene4_th_ch1.Text = "🔍 поверить Алине Красновой";
+            this.scene4_th_ch1.UseVisualStyleBackColor = false;
+            // 
+            // scene4_th_ch2
+            // 
+            this.scene4_th_ch2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.scene4_th_ch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
+            this.scene4_th_ch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scene4_th_ch2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.scene4_th_ch2.ForeColor = System.Drawing.Color.Gold;
+            this.scene4_th_ch2.Location = new System.Drawing.Point(214, 248);
+            this.scene4_th_ch2.Name = "scene4_th_ch2";
+            this.scene4_th_ch2.Size = new System.Drawing.Size(331, 90);
+            this.scene4_th_ch2.TabIndex = 18;
+            this.scene4_th_ch2.Text = "🔍 кинжал - улика против Красновой!";
+            this.scene4_th_ch2.UseVisualStyleBackColor = false;
+            // 
             // Scene4_theatre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.scene4_th_ch2);
+            this.Controls.Add(this.scene4_th_ch1);
             this.Controls.Add(this.scene4_vs34);
             this.Controls.Add(this.scene4_vs33);
             this.Controls.Add(this.scene4_vs32);
@@ -207,5 +240,7 @@
         private System.Windows.Forms.Label scene4_vs32;
         private System.Windows.Forms.Label scene4_vs33;
         private System.Windows.Forms.Label scene4_vs34;
+        private System.Windows.Forms.Button scene4_th_ch1;
+        private System.Windows.Forms.Button scene4_th_ch2;
     }
 }

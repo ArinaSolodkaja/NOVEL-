@@ -20,7 +20,7 @@ namespace NOVEL_
             ParentSceneId = parentScene;
             IsSecret = false;
         }
-
+        // изм 11 
         public bool IsAvailable(PlayerState player)
         {
             if (player.SceneId != ParentSceneId) return false;

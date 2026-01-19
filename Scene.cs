@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NOVEL_
 {
+    // изм 10 
     internal class Scene
     {
     }

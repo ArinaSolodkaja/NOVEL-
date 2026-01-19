@@ -150,7 +150,7 @@ namespace NOVEL_
             CenterTitle();
             CenterStartButton();
         }
-
+        // изм 8 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // Проверяем, был ли клик в правом верхнем углу для секрета

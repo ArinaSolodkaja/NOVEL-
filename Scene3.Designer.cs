@@ -149,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.scene3_fon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            // изм 3
 
         }
 
