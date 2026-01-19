@@ -360,7 +360,7 @@ namespace NOVEL_
         private void NavigateToScene5()
         {
             // Создаем и показываем Scene5
-            Scene5 nextScene = new Scene5();
+            Scene5_fin nextScene = new Scene5_fin();
             nextScene.Show();
 
             // Закрываем текущую форму
