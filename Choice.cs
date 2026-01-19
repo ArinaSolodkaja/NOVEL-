@@ -30,12 +30,15 @@ namespace NOVEL_
                 if (req.Key == "attention" && player.Attention < req.Value) return false;
                 if (req.Key == "logic" && player.Logic < req.Value) return false;
             }
-            return true;
+            
         }
 
         public void AddRequirement(string stat, int minValue)
         {
             Requirements[stat] = minValue;
         }
+
+
+        //привет
     }
 }
