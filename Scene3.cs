@@ -66,7 +66,7 @@ namespace NOVEL_
 
             // Обработчики кликов для кнопок
             scene3_theatre.Click += Scene3_Theatre_Click;
-            scene3_doctor.Click += Scene3_Doctor_Click;
+            scene3_doctor.Click += Scene3_Doctor_Click;  // ИСПРАВЛЕННЫЙ ОБРАБОТЧИК
         }
 
         private void Scene4_Load(object sender, EventArgs e)
@@ -241,6 +241,7 @@ namespace NOVEL_
             }
         }
 
+        // ИСПРАВЛЕННЫЙ ОБРАБОТЧИК - переход на Scene4_dc
         private void Scene3_Doctor_Click(object sender, EventArgs e)
         {
             // Анимация нажатия
@@ -258,23 +259,22 @@ namespace NOVEL_
                     clickTimer.Stop();
                     clickTimer.Dispose();
 
-                    // Переход на сцену доктора
+                    // ПЕРЕХОД НА SCENE4_DC (Доктор - след яда)
                     try
                     {
                         // Создаем экземпляр сцены доктора
-                        // SceneDoctor doctorScene = new SceneDoctor();
-                        // doctorScene.Show();
-                        // this.Hide();
+                        Scene4_dc doctorScene = new Scene4_dc();
+                        doctorScene.Show();
 
-                        // Временное сообщение, пока нет сцены доктора
-                        MessageBox.Show("Сцена доктора (след яда) в разработке...");
+                        // Закрываем текущую форму
+                        this.Hide();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Ошибка при переходе на сцену доктора:\n{ex.Message}",
+                        // Если класс Scene4_dc не существует, показываем сообщение
+                        MessageBox.Show($"Ошибка при переходе на сцену доктора:\n{ex.Message}\n\nУбедитесь, что класс Scene4_dc существует в проекте.",
                             "Ошибка перехода",
                             MessageBoxButtons.OK,
-                         // изм 7 
                             MessageBoxIcon.Error);
                     }
                 };

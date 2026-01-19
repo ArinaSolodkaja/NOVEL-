@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace NOVEL_
 {
-    public partial class Scene4_theatre : Form
+    public partial class Scene4_dc : Form
     {
         private int clickStage = 0;
         private Timer fadeTimer;
@@ -18,10 +18,10 @@ namespace NOVEL_
         private bool isFadingIn = false;
         private bool isFadingOut = false;
         private List<Label> currentFadeLabels = new List<Label>();
-        private Suspect suspectAlina;
         private Suspect suspectDoctor;
+        private Suspect suspectCountess;
 
-        public Scene4_theatre()
+        public Scene4_dc()
         {
             InitializeComponent();
 
@@ -29,147 +29,117 @@ namespace NOVEL_
             SetupTransparency();
 
             // Инициализируем подозреваемых
-            suspectAlina = new Suspect("Алина Краснова", "Актриса Мариинского театра");
             suspectDoctor = new Suspect("Доктор Львов", "Личный врач графа");
+            suspectCountess = new Suspect("Графиня Воронцова", "Жена графа");
 
             // Обработчики кликов
-            this.Click += Scene4_Click;
-            scene4_th.Click += Scene4_Click;
-            scene4_vs1.Click += Scene4_Click;
-            scene4_vs21.Click += Scene4_Click;
-            scene4_vs22.Click += Scene4_Click;
-            scene4_vs23.Click += Scene4_Click;
-            scene4_vs24.Click += Scene4_Click;
-            scene4_vs31.Click += Scene4_Click;
-            scene4_vs32.Click += Scene4_Click;
-            scene4_vs33.Click += Scene4_Click;
-            scene4_vs34.Click += Scene4_Click;
+            this.Click += Scene4_dc_Click;
+            scene4_dc_fon.Click += Scene4_dc_Click;
+            scene4_dc11.Click += Scene4_dc_Click;
+            scene4_dc21.Click += Scene4_dc_Click;
+            scene4_dc22.Click += Scene4_dc_Click;
+            scene4_dc31.Click += Scene4_dc_Click;
+            scene4_dc32.Click += Scene4_dc_Click;
+            scene4_dc41.Click += Scene4_dc_Click;
 
             // Обработчики для кнопок выбора
-            scene4_th_ch1.Click += Scene4_th_ch1_Click;
-            scene4_th_ch2.Click += Scene4_th_ch2_Click;
+            scene4_dc_ch1.Click += Scene4_dc_ch1_Click;
+            scene4_dc_ch2.Click += Scene4_dc_ch2_Click;
         }
 
         private void SetupInitialState()
         {
             // Скрываем все тексты и кнопки изначально
-            scene4_vs1.Visible = false;
-            scene4_vs21.Visible = false;
-            scene4_vs22.Visible = false;
-            scene4_vs23.Visible = false;
-            scene4_vs24.Visible = false;
-            scene4_vs31.Visible = false;
-            scene4_vs32.Visible = false;
-            scene4_vs33.Visible = false;
-            scene4_vs34.Visible = false;
-            scene4_th_ch1.Visible = false;
-            scene4_th_ch2.Visible = false;
-            scene4_th_ch1.Enabled = false;
-            scene4_th_ch2.Enabled = false;
+            scene4_dc11.Visible = false;
+            scene4_dc21.Visible = false;
+            scene4_dc22.Visible = false;
+            scene4_dc31.Visible = false;
+            scene4_dc32.Visible = false;
+            scene4_dc41.Visible = false;
+            scene4_dc_ch1.Visible = false;
+            scene4_dc_ch2.Visible = false;
+            scene4_dc_ch1.Enabled = false;
+            scene4_dc_ch2.Enabled = false;
 
-            // Устанавливаем начальную прозрачность
-            scene4_vs1.ForeColor = Color.FromArgb(0, scene4_vs1.ForeColor);
-            scene4_vs21.ForeColor = Color.FromArgb(0, scene4_vs21.ForeColor);
-            scene4_vs22.ForeColor = Color.FromArgb(0, scene4_vs22.ForeColor);
-            scene4_vs23.ForeColor = Color.FromArgb(0, scene4_vs23.ForeColor);
-            scene4_vs24.ForeColor = Color.FromArgb(0, scene4_vs24.ForeColor);
-            scene4_vs31.ForeColor = Color.FromArgb(0, scene4_vs31.ForeColor);
-            scene4_vs32.ForeColor = Color.FromArgb(0, scene4_vs32.ForeColor);
-            scene4_vs33.ForeColor = Color.FromArgb(0, scene4_vs33.ForeColor);
-            scene4_vs34.ForeColor = Color.FromArgb(0, scene4_vs34.ForeColor);
+            // Устанавливаем начальную прозрачность (ВСЕ ТЕКСТЫ СЦЕНЫ БЕЛЫЕ)
+            scene4_dc11.ForeColor = Color.FromArgb(0, Color.White);
+            scene4_dc21.ForeColor = Color.FromArgb(0, Color.White);
+            scene4_dc22.ForeColor = Color.FromArgb(0, Color.White);
+            scene4_dc31.ForeColor = Color.FromArgb(0, Color.White);
+            scene4_dc32.ForeColor = Color.FromArgb(0, Color.White);
+            scene4_dc41.ForeColor = Color.FromArgb(0, Color.White);
         }
 
         private void SetupTransparency()
         {
-            scene4_th.Dock = DockStyle.Fill;
-            scene4_th.SizeMode = PictureBoxSizeMode.StretchImage;
+            scene4_dc_fon.Dock = DockStyle.Fill;
+            scene4_dc_fon.SizeMode = PictureBoxSizeMode.StretchImage;
 
             // Устанавливаем Parent для всех меток
-            scene4_vs1.Parent = scene4_th;
-            scene4_vs21.Parent = scene4_th;
-            scene4_vs22.Parent = scene4_th;
-            scene4_vs23.Parent = scene4_th;
-            scene4_vs24.Parent = scene4_th;
-            scene4_vs31.Parent = scene4_th;
-            scene4_vs32.Parent = scene4_th;
-            scene4_vs33.Parent = scene4_th;
-            scene4_vs34.Parent = scene4_th;
+            scene4_dc11.Parent = scene4_dc_fon;
+            scene4_dc21.Parent = scene4_dc_fon;
+            scene4_dc22.Parent = scene4_dc_fon;
+            scene4_dc31.Parent = scene4_dc_fon;
+            scene4_dc32.Parent = scene4_dc_fon;
+            scene4_dc41.Parent = scene4_dc_fon;
+
+            // ВСЕ ТЕКСТЫ СЦЕНЫ БЕЛОГО ЦВЕТА
+            scene4_dc11.ForeColor = Color.White; // Заголовок - белый
+            scene4_dc21.ForeColor = Color.White; // Диалог доктора - белый
+            scene4_dc22.ForeColor = Color.White; // Диалог доктора - белый
+            scene4_dc31.ForeColor = Color.White; // Реплика следователя - белый
+            scene4_dc32.ForeColor = Color.White; // Реплика следователя - белый
+            scene4_dc41.ForeColor = Color.White; // Диалог доктора - белый
 
             // Настраиваем UseCompatibleTextRendering
-            scene4_vs1.UseCompatibleTextRendering = true;
-            scene4_vs21.UseCompatibleTextRendering = true;
-            scene4_vs22.UseCompatibleTextRendering = true;
-            scene4_vs23.UseCompatibleTextRendering = true;
-            scene4_vs24.UseCompatibleTextRendering = true;
-            scene4_vs31.UseCompatibleTextRendering = true;
-            scene4_vs32.UseCompatibleTextRendering = true;
-            scene4_vs33.UseCompatibleTextRendering = true;
-            scene4_vs34.UseCompatibleTextRendering = true;
+            scene4_dc11.UseCompatibleTextRendering = true;
+            scene4_dc21.UseCompatibleTextRendering = true;
+            scene4_dc22.UseCompatibleTextRendering = true;
+            scene4_dc31.UseCompatibleTextRendering = true;
+            scene4_dc32.UseCompatibleTextRendering = true;
+            scene4_dc41.UseCompatibleTextRendering = true;
         }
 
-        private void Scene4_Theatre_Load(object sender, EventArgs e)
-        {
-            scene4_vs1.BringToFront();
-            scene4_vs21.BringToFront();
-            scene4_vs22.BringToFront();
-            scene4_vs23.BringToFront();
-            scene4_vs24.BringToFront();
-            scene4_vs31.BringToFront();
-            scene4_vs32.BringToFront();
-            scene4_vs33.BringToFront();
-            scene4_vs34.BringToFront();
-            scene4_th_ch1.BringToFront();
-            scene4_th_ch2.BringToFront();
-        }
-
-        private void Scene4_Click(object sender, EventArgs e)
+        private void Scene4_dc_Click(object sender, EventArgs e)
         {
             if (isFadingIn || isFadingOut) return;
 
             switch (clickStage)
             {
-                case 0: // Первый клик - показываем scene4_vs1
-                    StartFadeIn(new List<Label> { scene4_vs1 });
+                case 0: // Первый клик - показываем scene4_dc11
+                    StartFadeIn(new List<Label> { scene4_dc11 });
                     clickStage = 1;
                     break;
 
-                case 1: // Второй клик - показываем scene4_vs21 и scene4_vs22
-                    StartFadeOut(new List<Label> { scene4_vs1 }, () =>
+                case 1: // Второй клик - показываем scene4_dc21 и scene4_dc22
+                    StartFadeOut(new List<Label> { scene4_dc11 }, () =>
                     {
-                        StartFadeIn(new List<Label> { scene4_vs21, scene4_vs22 });
+                        StartFadeIn(new List<Label> { scene4_dc21, scene4_dc22 });
                         clickStage = 2;
                     });
                     break;
 
-                case 2: // Третий клик - показываем scene4_vs23 и scene4_vs24
-                    StartFadeOut(new List<Label> { scene4_vs21, scene4_vs22 }, () =>
+                case 2: // Третий клик - показываем scene4_dc31 и scene4_dc32
+                    StartFadeOut(new List<Label> { scene4_dc21, scene4_dc22 }, () =>
                     {
-                        StartFadeIn(new List<Label> { scene4_vs23, scene4_vs24 });
+                        StartFadeIn(new List<Label> { scene4_dc31, scene4_dc32 });
                         clickStage = 3;
                     });
                     break;
 
-                case 3: // Четвертый клик - показываем scene4_vs31 и scene4_vs32
-                    StartFadeOut(new List<Label> { scene4_vs23, scene4_vs24 }, () =>
+                case 3: // Четвертый клик - показываем scene4_dc41
+                    StartFadeOut(new List<Label> { scene4_dc31, scene4_dc32 }, () =>
                     {
-                        StartFadeIn(new List<Label> { scene4_vs31, scene4_vs32 });
+                        StartFadeIn(new List<Label> { scene4_dc41 });
                         clickStage = 4;
                     });
                     break;
 
-                case 4: // Пятый клик - показываем scene4_vs33 и scene4_vs34
-                    StartFadeOut(new List<Label> { scene4_vs31, scene4_vs32 }, () =>
-                    {
-                        StartFadeIn(new List<Label> { scene4_vs33, scene4_vs34 });
-                        clickStage = 5;
-                    });
-                    break;
-
-                case 5: // Шестой клик - показываем кнопки выбора
-                    StartFadeOut(new List<Label> { scene4_vs33, scene4_vs34 }, () =>
+                case 4: // Пятый клик - показываем кнопки выбора
+                    StartFadeOut(new List<Label> { scene4_dc41 }, () =>
                     {
                         ShowChoiceButtons();
-                        clickStage = 6;
+                        clickStage = 5;
                     });
                     break;
             }
@@ -178,15 +148,15 @@ namespace NOVEL_
         private void ShowChoiceButtons()
         {
             // Анимация появления кнопок
-            scene4_th_ch1.Visible = true;
-            scene4_th_ch2.Visible = true;
-            scene4_th_ch1.Enabled = true;
-            scene4_th_ch2.Enabled = true;
+            scene4_dc_ch1.Visible = true;
+            scene4_dc_ch2.Visible = true;
+            scene4_dc_ch1.Enabled = true;
+            scene4_dc_ch2.Enabled = true;
 
             // Начальная позиция (под экраном)
-            int centerX = this.ClientSize.Width / 2 - scene4_th_ch1.Width / 2;
-            scene4_th_ch1.Location = new Point(centerX, this.ClientSize.Height + 50);
-            scene4_th_ch2.Location = new Point(centerX, this.ClientSize.Height + 180);
+            int centerX = this.ClientSize.Width / 2 - scene4_dc_ch1.Width / 2;
+            scene4_dc_ch1.Location = new Point(centerX, this.ClientSize.Height + 50);
+            scene4_dc_ch2.Location = new Point(centerX, this.ClientSize.Height + 180);
 
             // Анимация подъема кнопок
             Timer animationTimer = new Timer();
@@ -207,8 +177,8 @@ namespace NOVEL_
                 int newY1 = startY1 - (int)((startY1 - targetY1) * ((float)step / totalSteps));
                 int newY2 = startY2 - (int)((startY2 - targetY2) * ((float)step / totalSteps));
 
-                scene4_th_ch1.Location = new Point(scene4_th_ch1.Location.X, newY1);
-                scene4_th_ch2.Location = new Point(scene4_th_ch2.Location.X, newY2);
+                scene4_dc_ch1.Location = new Point(scene4_dc_ch1.Location.X, newY1);
+                scene4_dc_ch2.Location = new Point(scene4_dc_ch2.Location.X, newY2);
 
                 if (step >= totalSteps)
                 {
@@ -216,15 +186,52 @@ namespace NOVEL_
                     animationTimer.Dispose();
 
                     // Финальные позиции
-                    scene4_th_ch1.Location = new Point(centerX, targetY1);
-                    scene4_th_ch2.Location = new Point(centerX, targetY2);
+                    scene4_dc_ch1.Location = new Point(centerX, targetY1);
+                    scene4_dc_ch2.Location = new Point(centerX, targetY2);
                 }
             };
 
             animationTimer.Start();
         }
 
-        private void Scene4_th_ch1_Click(object sender, EventArgs e)
+        private void Scene4_dc_ch1_Click(object sender, EventArgs e)
+        {
+            // Анимация нажатия кнопки
+            Button button = sender as Button;
+            Color originalColor = button.BackColor;
+            button.BackColor = Color.FromArgb(20, 10, 5);
+
+            Timer clickTimer = new Timer();
+            clickTimer.Interval = 150;
+            clickTimer.Tick += (s, args) =>
+            {
+                button.BackColor = originalColor;
+                clickTimer.Stop();
+                clickTimer.Dispose();
+
+                // Создаем улику против графини Воронцовой
+                InteractiveObject countessEvidence = InteractiveObject.ServantTestimony();
+
+                // Добавляем улику графине
+                suspectCountess.AddEvidence(countessEvidence.Name, countessEvidence.EvidenceValue);
+
+                // Показываем стилизованный MessageBox с переходом на Scene5
+                ShowStylizedMessageBoxWithTransition(
+                    "+ Улика против Графини Воронцовой",
+                    "Вы решили поверить доктору Львову.\n\n" +
+                    "Его показания добавляют улику против графини Воронцовой:\n" +
+                    "• Доктор видел горничную Анну у сейфа графа\n" +
+                    "• Утверждает, что в доме все боятся графини\n" +
+                    "• Возможно, графиня руководила действиями горничной\n\n" +
+                    $"Уровень подозрительности графини Воронцовой: {suspectCountess.SuspicionLevel}",
+                    "🔍 Улика добавлена",
+                    Color.FromArgb(60, 30, 15)
+                );
+            };
+            clickTimer.Start();
+        }
+
+        private void Scene4_dc_ch2_Click(object sender, EventArgs e)
         {
             // Анимация нажатия кнопки
             Button button = sender as Button;
@@ -240,7 +247,7 @@ namespace NOVEL_
                 clickTimer.Dispose();
 
                 // Создаем улику против доктора Львова
-                InteractiveObject doctorEvidence = InteractiveObject.TestimonyAgainstDoctor();
+                InteractiveObject doctorEvidence = InteractiveObject.MedicalRecords();
 
                 // Добавляем улику доктору
                 suspectDoctor.AddEvidence(doctorEvidence.Name, doctorEvidence.EvidenceValue);
@@ -248,49 +255,12 @@ namespace NOVEL_
                 // Показываем стилизованный MessageBox с переходом на Scene5
                 ShowStylizedMessageBoxWithTransition(
                     "+ Улика против Доктора Львова",
-                    "Вы решили поверить Алине Красновой.\n\n" +
-                    "Её показания добавляют улику против доктора Львова:\n" +
-                    "• Утверждает, что видела доктора у калитки после убийства\n" +
-                    "• Описывает его паническое бегство\n" +
-                    "• Кинжал мог быть подброшен\n\n" +
+                    "Вы не поверили доктору Львову.\n\n" +
+                    "Его показания против графини выглядят как попытка отвести подозрения:\n" +
+                    "• Доктор признался в ненависти к графу\n" +
+                    "• Имел доступ к ядам как врач\n" +
+                    "• Мог использовать горничную для отвлечения внимания\n\n" +
                     $"Уровень подозрительности доктора Львова: {suspectDoctor.SuspicionLevel}",
-                    "🔍 Улика добавлена",
-                    Color.FromArgb(60, 30, 15)
-                );
-            };
-            clickTimer.Start();
-        }
-
-        private void Scene4_th_ch2_Click(object sender, EventArgs e)
-        {
-            // Анимация нажатия кнопки
-            Button button = sender as Button;
-            Color originalColor = button.BackColor;
-            button.BackColor = Color.FromArgb(20, 10, 5);
-
-            Timer clickTimer = new Timer();
-            clickTimer.Interval = 150;
-            clickTimer.Tick += (s, args) =>
-            {
-                button.BackColor = originalColor;
-                clickTimer.Stop();
-                clickTimer.Dispose();
-
-                // Создаем улику против Алины Красновой
-                InteractiveObject alinaEvidence = InteractiveObject.KnifeEvidence();
-
-                // Добавляем улику Алине
-                suspectAlina.AddEvidence(alinaEvidence.Name, alinaEvidence.EvidenceValue);
-
-                // Показываем стилизованный MessageBox с переходом на Scene5
-                ShowStylizedMessageBoxWithTransition(
-                    "+ Улика против Алины Красновой",
-                    "Вы решили не доверять Алине Красновой.\n\n" +
-                    "Кинжал с её инициалами - серьёзная улика:\n" +
-                    "• Кинжал найден на месте преступления\n" +
-                    "• Гравировка «А.К.» соответствует её инициалам\n" +
-                    "• Её версия о возвращении кинжала неубедительна\n\n" +
-                    $"Уровень подозрительности Алины Красновой: {suspectAlina.SuspicionLevel}",
                     "🔍 Улика добавлена",
                     Color.FromArgb(40, 20, 10)
                 );
@@ -397,7 +367,7 @@ namespace NOVEL_
             this.Hide();
         }
 
-        // СТАРЫЙ МЕТОД (ОСТАВЛЯЕМ ДЛЯ СОВМЕСТИМОСТИ, ЕСЛИ ГДЕ-ТО ИСПОЛЬЗУЕТСЯ)
+        // СТАРЫЙ МЕТОД (ОСТАВЛЯЕМ ДЛЯ СОВМЕСТИМОСТИ)
         private void ShowStylizedMessageBox(string title, string message, string buttonText, Color panelColor)
         {
             // Создаем кастомную форму для сообщения
@@ -556,9 +526,39 @@ namespace NOVEL_
             }
         }
 
-        private void scene4_vs1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Scene4_Click(sender, e);
+            // Для совместимости
+        }
+
+        private void Scene4_dc_Load(object sender, EventArgs e)
+        {
+            // Можно оставить пустым или добавить инициализацию
+        }
+
+        private void scene4_dc21_Click(object sender, EventArgs e)
+        {
+            // Можно оставить пустым или использовать для отладки
+        }
+
+        private void scene4_dc32_Click(object sender, EventArgs e)
+        {
+            // Можно оставить пустым или использовать для отладки
+        }
+
+        private void scene4_dc31_Click(object sender, EventArgs e)
+        {
+            // Можно оставить пустым или использовать для отладки
+        }
+
+        private void scene4_dc22_Click(object sender, EventArgs e)
+        {
+            // Можно оставить пустым или использовать для отладки
+        }
+
+        private void scene4_dc41_Click(object sender, EventArgs e)
+        {
+            // Можно оставить пустым или использовать для отладки
         }
     }
 }

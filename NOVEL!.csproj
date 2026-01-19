@@ -76,17 +76,23 @@
     <Compile Include="Scene3.Designer.cs">
       <DependentUpon>Scene3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scene4_doctor.cs">
+    <Compile Include="Scene4_dc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Scene4_doctor.Designer.cs">
-      <DependentUpon>Scene4_doctor.cs</DependentUpon>
+    <Compile Include="Scene4_dc.Designer.cs">
+      <DependentUpon>Scene4_dc.cs</DependentUpon>
     </Compile>
     <Compile Include="Scene4_theatre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Scene4_theatre.Designer.cs">
       <DependentUpon>Scene4_theatre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scene5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scene5.Designer.cs">
+      <DependentUpon>Scene5.cs</DependentUpon>
     </Compile>
     <Compile Include="Suspect.cs" />
     <EmbeddedResource Include="Scene0.resx">
@@ -110,8 +116,14 @@
     <EmbeddedResource Include="Scene3.resx">
       <DependentUpon>Scene3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Scene4_dc.resx">
+      <DependentUpon>Scene4_dc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Scene4_theatre.resx">
       <DependentUpon>Scene4_theatre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scene5.resx">
+      <DependentUpon>Scene5.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

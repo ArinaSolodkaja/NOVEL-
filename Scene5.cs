@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace NOVEL_
 {
-    public partial class Scene4_doctor : Form
+    public partial class Scene5 : Form
     {
-        public Scene4_doctor()
+        public Scene5()
         {
             InitializeComponent();
+        }
+
+        private void Scene5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

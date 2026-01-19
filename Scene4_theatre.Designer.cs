@@ -37,11 +37,11 @@
             this.scene4_vs23 = new System.Windows.Forms.Label();
             this.scene4_vs24 = new System.Windows.Forms.Label();
             this.scene4_vs31 = new System.Windows.Forms.Label();
-            this.scene4_vs32 = new System.Windows.Forms.Label();
             this.scene4_vs33 = new System.Windows.Forms.Label();
             this.scene4_vs34 = new System.Windows.Forms.Label();
             this.scene4_th_ch1 = new System.Windows.Forms.Button();
             this.scene4_th_ch2 = new System.Windows.Forms.Button();
+            this.scene4_vs32 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.scene4_th)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,19 +135,6 @@
             this.scene4_vs31.Text = "Её страх кажется подлинным.";
             this.scene4_vs31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // scene4_vs32
-            // 
-            this.scene4_vs32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.scene4_vs32.BackColor = System.Drawing.Color.Transparent;
-            this.scene4_vs32.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.scene4_vs32.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.scene4_vs32.Location = new System.Drawing.Point(11, 204);
-            this.scene4_vs32.Name = "scene4_vs32";
-            this.scene4_vs32.Size = new System.Drawing.Size(701, 34);
-            this.scene4_vs32.TabIndex = 14;
-            this.scene4_vs32.Text = "Но кинжал — вещественное доказательство.";
-            this.scene4_vs32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // scene4_vs33
             // 
             this.scene4_vs33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -176,7 +163,7 @@
             // 
             // scene4_th_ch1
             // 
-            this.scene4_th_ch1.Anchor = System.Windows.Forms.AnchorStyles.None; // ИЗМЕНЕНО
+            this.scene4_th_ch1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.scene4_th_ch1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
             this.scene4_th_ch1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scene4_th_ch1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -190,7 +177,7 @@
             // 
             // scene4_th_ch2
             // 
-            this.scene4_th_ch2.Anchor = System.Windows.Forms.AnchorStyles.None; // ИЗМЕНЕНО
+            this.scene4_th_ch2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.scene4_th_ch2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(20)))), ((int)(((byte)(10)))));
             this.scene4_th_ch2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scene4_th_ch2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -201,6 +188,19 @@
             this.scene4_th_ch2.TabIndex = 18;
             this.scene4_th_ch2.Text = "🔍 кинжал - улика против Красновой!";
             this.scene4_th_ch2.UseVisualStyleBackColor = false;
+            // 
+            // scene4_vs32
+            // 
+            this.scene4_vs32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.scene4_vs32.BackColor = System.Drawing.Color.Transparent;
+            this.scene4_vs32.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.scene4_vs32.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.scene4_vs32.Location = new System.Drawing.Point(11, 204);
+            this.scene4_vs32.Name = "scene4_vs32";
+            this.scene4_vs32.Size = new System.Drawing.Size(701, 34);
+            this.scene4_vs32.TabIndex = 14;
+            this.scene4_vs32.Text = "Но кинжал — вещественное доказательство.";
+            this.scene4_vs32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Scene4_theatre
             // 
@@ -237,10 +237,10 @@
         private System.Windows.Forms.Label scene4_vs23;
         private System.Windows.Forms.Label scene4_vs24;
         private System.Windows.Forms.Label scene4_vs31;
-        private System.Windows.Forms.Label scene4_vs32;
         private System.Windows.Forms.Label scene4_vs33;
         private System.Windows.Forms.Label scene4_vs34;
         private System.Windows.Forms.Button scene4_th_ch1;
         private System.Windows.Forms.Button scene4_th_ch2;
+        private System.Windows.Forms.Label scene4_vs32;
     }
 }
