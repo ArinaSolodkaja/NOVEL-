@@ -60,7 +60,7 @@ namespace NOVEL_
 
         private void SetupInitialState()
         {
-            // Скрываем все тексты и кнопку изначально
+            // Скрываем все тексты и кнопки изначально
             scene5_fin11.Visible = false;
             scene5_fin12.Visible = false;
             scene5_fin21.Visible = false;
@@ -68,6 +68,8 @@ namespace NOVEL_
             scene5_fin24.Visible = false;
             scene5_fin_ch_sus.Visible = false;
             scene5_fin_ch_sus.Enabled = false;
+            btnExit.Visible = true;
+            btnExit.BringToFront();
 
             // Устанавливаем начальную прозрачность
             scene5_fin11.ForeColor = Color.FromArgb(0, scene5_fin11.ForeColor);
@@ -110,6 +112,9 @@ namespace NOVEL_
 
             // Обработчик для кнопки выбора подозреваемого
             scene5_fin_ch_sus.Click += Scene5_fin_ch_sus_Click;
+
+            // Обработчик для кнопки выхода
+            btnExit.Click += BtnExit_Click;
 
             // Начальный показ первого текста
             ShowInitialText();
@@ -550,6 +555,38 @@ namespace NOVEL_
             scene5_fin21.BringToFront();
             scene5_fin23.BringToFront();
             scene5_fin24.BringToFront();
+            btnExit.BringToFront();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            // Анимация нажатия кнопки выхода
+            Color originalColor = btnExit.BackColor;
+            btnExit.BackColor = Color.FromArgb(20, 10, 5);
+
+            Timer clickTimer = new Timer();
+            clickTimer.Interval = 150;
+            clickTimer.Tick += (s, args) =>
+            {
+                btnExit.BackColor = originalColor;
+                clickTimer.Stop();
+                clickTimer.Dispose();
+
+                // Показываем диалог подтверждения выхода
+                DialogResult result = MessageBox.Show(
+                    "Вы уверены, что хотите выйти из игры?",
+                    "Подтверждение выхода",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    // Закрываем все формы и завершаем приложение
+                    Application.Exit();
+                }
+            };
+            clickTimer.Start();
         }
     }
 }

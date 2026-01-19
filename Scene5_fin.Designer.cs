@@ -36,13 +36,14 @@
             this.scene5_fin24 = new System.Windows.Forms.Label();
             this.scene5_fin23 = new System.Windows.Forms.Label();
             this.scene5_fin_ch_sus = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.scene5_lib_fon)).BeginInit();
             this.SuspendLayout();
             // 
             // scene5_lib_fon
             // 
-            this.scene5_lib_fon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.scene5_lib_fon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.scene5_lib_fon.Image = ((System.Drawing.Image)(resources.GetObject("scene5_lib_fon.Image")));
             this.scene5_lib_fon.Location = new System.Drawing.Point(-7, -2);
@@ -131,11 +132,26 @@
             this.scene5_fin_ch_sus.Text = "🔍 Обвинить подозреваемого";
             this.scene5_fin_ch_sus.UseVisualStyleBackColor = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(30)))), ((int)(((byte)(15)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.btnExit.ForeColor = System.Drawing.Color.Gold;
+            this.btnExit.Location = new System.Drawing.Point(700, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(88, 35);
+            this.btnExit.TabIndex = 21;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
             // Scene5_fin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.scene5_fin_ch_sus);
             this.Controls.Add(this.scene5_fin23);
             this.Controls.Add(this.scene5_fin24);
@@ -161,5 +177,6 @@
         private System.Windows.Forms.Label scene5_fin24;
         private System.Windows.Forms.Label scene5_fin23;
         private System.Windows.Forms.Button scene5_fin_ch_sus;
+        private System.Windows.Forms.Button btnExit;
     }
 }
